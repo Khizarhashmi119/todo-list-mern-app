@@ -1,0 +1,23 @@
+{
+  "name": "todolist-mern-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Mohd. Khizar Hashmi",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app",
+    "client": "cd client && yarn start",
+    "mern": "concurrently -n 'server,client' -c 'green,blue' \"yarn dev\" \"yarn client\""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.18",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
